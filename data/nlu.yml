@@ -1,0 +1,213 @@
+# nlu.yml
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - thanks bye
+    - talk to you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - yeah
+    - right
+    - exactly
+    - absolutely
+    - sure
+    - yep
+    - ok
+    - okay
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - nope
+    - nah
+    - not interested
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - what are you?
+    - who are you?
+
+- intent: report_hazard
+  examples: |
+    - I want to report a hazard
+    - there's a pothole on [Main Street](location)
+    - I need to report a [power outage](hazard_type) in [Marion County](location)
+    - there's [debris](hazard_type) on the road at [5th and Main](location)
+    - [traffic light](hazard_type) is out at [downtown intersection](location)
+    - report [flooding](hazard_type) on [Highway 31](location)
+    - [icy conditions](hazard_type) on [I-65](location)
+    - there's a [water main break](hazard_type) on [Oak Street](location)
+    - [fallen tree](hazard_type) blocking [Meridian Street](location)
+    - I want to report a problem
+    - there's a safety issue
+    - something dangerous
+    - hazard report
+    - report an issue
+
+- intent: ask_safety_tips
+  examples: |
+    - give me safety tips
+    - how to stay safe
+    - safety advice
+    - [winter](safety_category) safety tips
+    - [tornado](safety_category) safety
+    - [flood](safety_category) safety
+    - emergency preparedness
+    - what should I do in an emergency
+    - how to prepare for [storms](safety_category)
+    - [fire](safety_category) safety tips
+    - safety information
+
+- intent: ask_road_conditions
+  examples: |
+    - road conditions
+    - traffic update
+    - highway conditions
+    - construction information
+    - INDOT updates
+    - are the roads clear
+    - any road closures
+    - traffic information
+    - road status
+    - construction delays
+
+- intent: ask_weather
+  examples: |
+    - weather information
+    - what's the weather
+    - weather forecast
+    - severe weather
+    - weather alerts
+    - storm warnings
+    - weather conditions
+
+- intent: ask_government_services
+  examples: |
+    - government services
+    - county services
+    - state services
+    - Indiana government
+    - local government
+    - government contacts
+    - public services
+    - government information
+
+- intent: ask_emergency_contacts
+  examples: |
+    - emergency contacts
+    - emergency numbers
+    - who to call
+    - emergency services
+    - police contact
+    - fire department
+    - emergency phone numbers
+
+- intent: ask_help
+  examples: |
+    - help
+    - what can you do
+    - how can you help
+    - what services do you provide
+    - help me
+    - I need help
+    - assistance
+    - what are your features
+
+- intent: thank
+  examples: |
+    - thanks
+    - thank you
+    - thank you very much
+    - thanks a lot
+    - appreciate it
+    - thanks for the help
+    - thank you for your help
+
+- intent: out_of_scope
+  examples: |
+    - what's the weather in California
+    - tell me a joke
+    - play music
+    - what's 2+2
+    - random question
+    - I want pizza
+    - movie recommendations

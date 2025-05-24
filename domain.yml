@@ -1,0 +1,129 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - report_hazard
+  - ask_safety_tips
+  - ask_road_conditions
+  - ask_weather
+  - ask_government_services
+  - ask_emergency_contacts
+  - ask_help
+  - thank
+  - out_of_scope
+
+entities:
+  - location
+  - hazard_type
+  - county
+  - safety_category
+  - service_type
+
+slots:
+  location:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: location
+  hazard_type:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: hazard_type
+  county:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: county
+  safety_category:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: safety_category
+  service_type:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: service_type
+
+responses:
+  utter_greet:
+  - text: "Hello! I'm the Indiana Citizens Assistant. How can I help you today?"
+  - text: "Hi there! I'm here to help with safety information, hazard reporting, and Indiana services. What do you need?"
+
+  utter_cheer_up:
+  - text: "Here's something to cheer you up: Remember that help is always available, and you're not alone!"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Stay safe! Feel free to come back anytime you need assistance."
+  - text: "Goodbye! Remember, I'm here 24/7 for Indiana residents."
+
+  utter_iamabot:
+  - text: "I'm the Indiana Citizens Assistant, a chatbot designed to help residents with safety, hazard reporting, and government services."
+
+  utter_safety_tips_general:
+  - text: "Here are some general safety tips for Indiana residents:\n• Keep a 3-day emergency supply kit\n• Know your county's emergency contacts\n• Stay informed through IEMA alerts\n• Register for emergency notifications"
+
+  utter_safety_tips_winter:
+  - text: "Winter safety tips for Indiana:\n• Keep emergency supplies in your car\n• Check INDOT for road conditions\n• Clear snow from exhaust pipes\n• Dress in layers during cold warnings"
+
+  utter_safety_tips_tornado:
+  - text: "Tornado safety for Indiana (peak season April-June):\n• Have a weather radio ready\n• Know your safe room (lowest floor, interior)\n• Don't try to outrun tornadoes while driving\n• Sign up for county emergency alerts"
+
+  utter_road_conditions:
+  - text: "For current Indiana road conditions:\n• Visit INDOT's website at in.gov/indot\n• Call 511 for updates\n• Download the INDOT mobile app\n• Check for construction and traffic alerts"
+
+  utter_emergency_contacts:
+  - text: "Emergency contacts:\n• Life-threatening emergencies: 911\n• Indiana State Police: *ISP (*477)\n• INDOT Road Conditions: 511\n• Indiana Emergency Management: Contact your county EMA"
+
+  utter_government_services:
+  - text: "Indiana has 92 counties with local services. Visit in.gov to find:\n• County government contacts\n• Local service offices\n• State agency information\n• Online services portal"
+
+  utter_help:
+  - text: "I can help you with:\n• Report hazards (potholes, power outages, debris)\n• Get safety tips for weather emergencies\n• Find government services and contacts\n• Get road and traffic information\n• Answer questions about Indiana\n\nJust tell me what you need!"
+
+  utter_thank:
+  - text: "You're welcome! I'm here to help Indiana residents stay safe and informed."
+  - text: "Happy to help! Feel free to ask if you need anything else."
+
+  utter_ask_location:
+  - text: "Could you please tell me the location of the hazard? (Street address or county)"
+
+  utter_ask_hazard_type:
+  - text: "What type of hazard are you reporting? (pothole, power outage, debris, traffic light, etc.)"
+
+  utter_hazard_reported:
+  - text: "Thank you for reporting this hazard. I've logged your report and it will be forwarded to the appropriate authorities."
+
+  utter_out_of_scope:
+  - text: "I'm specifically designed to help Indiana residents with safety, hazard reporting, and local government services. Is there something related to these topics I can help you with?"
+
+  utter_weather:
+  - text: "For current weather information and alerts, I recommend checking the National Weather Service or your local weather apps. I can help you with weather safety tips if needed!"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+forms:
+  hazard_report_form:
+    required_slots:
+      - location
+      - hazard_type

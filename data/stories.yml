@@ -1,0 +1,66 @@
+# stories.yml
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: hazard report story
+  steps:
+  - intent: report_hazard
+  - action: hazard_report_form
+  - active_loop: hazard_report_form
+  - active_loop: null
+  - action: utter_hazard_reported
+
+- story: safety tips story
+  steps:
+  - intent: ask_safety_tips
+  - action: utter_safety_tips_general
+
+- story: road conditions story
+  steps:
+  - intent: ask_road_conditions
+  - action: utter_road_conditions
+
+- story: help story
+  steps:
+  - intent: ask_help
+  - action: utter_help
+
+- story: say goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: out of scope
+  steps:
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+
+

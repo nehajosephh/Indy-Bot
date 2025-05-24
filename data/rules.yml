@@ -1,0 +1,34 @@
+# rules.yml
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Thank user
+  steps:
+  - intent: thank
+  - action: utter_thank
+
+- rule: Activate hazard report form
+  steps:
+  - intent: report_hazard
+  - action: hazard_report_form
+  - active_loop: hazard_report_form
+
+- rule: Submit hazard report form
+  condition:
+  - active_loop: hazard_report_form
+  - slot_was_set:
+    - requested_slot: null
+  steps:
+  - action: utter_hazard_reported
+  - active_loop: null
