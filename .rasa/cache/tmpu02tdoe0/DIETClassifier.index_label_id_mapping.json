@@ -1,0 +1,14 @@
+{
+  "0": "affirm",
+  "1": "connect_services",
+  "2": "deny",
+  "3": "emergency_alert",
+  "4": "get_safety_tip",
+  "5": "goodbye",
+  "6": "greet",
+  "7": "help",
+  "8": "out_of_scope",
+  "9": "report_hazard",
+  "10": "thank",
+  "11": "weather_related"
+}

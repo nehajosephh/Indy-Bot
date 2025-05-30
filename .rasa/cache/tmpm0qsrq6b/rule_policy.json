@@ -1,0 +1,42 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}]": "utter_goodbye",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}, {\"prev_action\": {\"action_name\": \"utter_goodbye\"}, \"user\": {\"intent\": \"goodbye\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"out_of_scope\"}}]": "utter_out_of_scope",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"out_of_scope\"}}, {\"prev_action\": {\"action_name\": \"utter_out_of_scope\"}, \"user\": {\"intent\": \"out_of_scope\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"first_aid_instructions\"}}]": "utter_first_aid_instructions",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"first_aid_instructions\"}}, {\"prev_action\": {\"action_name\": \"utter_first_aid_instructions\"}, \"user\": {\"intent\": \"first_aid_instructions\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"nearest_police_station\"}}]": "utter_nearest_police_station",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"nearest_police_station\"}}, {\"prev_action\": {\"action_name\": \"utter_nearest_police_station\"}, \"user\": {\"intent\": \"nearest_police_station\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"domestic_abuse_help\"}}]": "utter_domestic_abuse_help",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"domestic_abuse_help\"}}, {\"prev_action\": {\"action_name\": \"utter_domestic_abuse_help\"}, \"user\": {\"intent\": \"domestic_abuse_help\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"emergency_contacts\"}}]": "utter_emergency_contacts",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"emergency_contacts\"}}, {\"prev_action\": {\"action_name\": \"utter_emergency_contacts\"}, \"user\": {\"intent\": \"emergency_contacts\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"help\"}}]": "utter_help",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"help\"}}, {\"prev_action\": {\"action_name\": \"utter_help\"}, \"user\": {\"intent\": \"help\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"weather_alerts\"}}]": "utter_weather_alerts",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"weather_alerts\"}}, {\"prev_action\": {\"action_name\": \"utter_weather_alerts\"}, \"user\": {\"intent\": \"weather_alerts\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"emergency_alert\"}}]": "utter_emergency_alert",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"emergency_alert\"}}, {\"prev_action\": {\"action_name\": \"utter_emergency_alert\"}, \"user\": {\"intent\": \"emergency_alert\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {},
+    "rules_not_in_stories": [
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"first_aid_instructions\"}}, {\"prev_action\": {\"action_name\": \"utter_first_aid_instructions\"}, \"user\": {\"intent\": \"first_aid_instructions\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"domestic_abuse_help\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"weather_alerts\"}}, {\"prev_action\": {\"action_name\": \"utter_weather_alerts\"}, \"user\": {\"intent\": \"weather_alerts\"}}]",
+      "predicting default action with intent back",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"emergency_contacts\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"domestic_abuse_help\"}}, {\"prev_action\": {\"action_name\": \"utter_domestic_abuse_help\"}, \"user\": {\"intent\": \"domestic_abuse_help\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"emergency_contacts\"}}, {\"prev_action\": {\"action_name\": \"utter_emergency_contacts\"}, \"user\": {\"intent\": \"emergency_contacts\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"weather_alerts\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"nearest_police_station\"}}, {\"prev_action\": {\"action_name\": \"utter_nearest_police_station\"}, \"user\": {\"intent\": \"nearest_police_station\"}}]",
+      "predicting default action with intent session_start",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"nearest_police_station\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"first_aid_instructions\"}}]",
+      "predicting default action with intent restart"
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "0": "affirm",
+  "1": "chitchat",
+  "2": "connect_services",
+  "3": "deny",
+  "4": "emergency_alert",
+  "5": "get_safety_tip",
+  "6": "goodbye",
+  "7": "greet",
+  "8": "help",
+  "9": "out_of_scope",
+  "10": "report_hazard",
+  "11": "thank",
+  "12": "weather_related"
+}

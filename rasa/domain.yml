@@ -1,0 +1,19 @@
+intents:
+  - greet
+  - report_hazard
+  - emergency_alert
+  - safety_tip
+
+responses:
+  utter_greet:
+    - text: "Hello! I’m your Indy Safety Bot. How can I help you today?"
+  utter_report_hazard:
+    - text: "You can report hazards like potholes at indy.gov/potholes."
+  utter_emergency_alert:
+    - text: "There are no emergency alerts right now."
+  utter_safety_tip:
+    - text: "Stay alert and keep emergency contact numbers handy."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

@@ -1,0 +1,229 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good afternoon
+    - good evening
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - see you around
+    - bye bye
+    - see you later
+    - take care
+
+- intent: thank
+  examples: |
+    - thanks
+    - thank you
+    - appreciate it
+    - thanks a lot
+    - thank you so much
+    - thanks for the help
+    - I appreciate it
+
+- intent: help
+  examples: |
+    - help
+    - how can you help
+    - what can you do
+    - what are your features
+    - what do you do
+    - how do you work
+    - what can you help me with
+    - what services do you provide
+
+- intent: report_hazard
+  examples: |
+    - I want to report a hazard
+    - there's a hazard at [123 Main St](location)
+    - I see a [broken glass](hazard_type) on the sidewalk
+    - report hazard at [downtown](location)
+    - there's [dangerous debris](hazard_type) at [Central Park](location)
+    - I need to report a [pothole](hazard_type)
+    - there's a [fallen tree](hazard_type) blocking the road
+    - report [slippery surface](hazard_type) at [City Hall](location)
+    - there's [uneven pavement](hazard_type) at [Market Street](location)
+    - report [damaged manhole cover](hazard_type) at [5th Avenue](location)
+    - there's a [flooded area](hazard_type) near [Riverside Park](location)
+    - I see [damaged street lights](hazard_type) on [Main Street](location)
+    - report [broken traffic signals](hazard_type) at [Downtown intersection](location)
+    - there are [damaged road signs](hazard_type) on [Highway 31](location)
+    - I found [exposed electrical wires](hazard_type) at [Park Avenue](location)
+    - report [damaged utility pole](hazard_type) near [City Center](location)
+    - there's a [leaking water pipe](hazard_type) at [Waterfront](location)
+    - I see [damaged fire hydrant](hazard_type) on [Fire Station Road](location)
+    - report [chemical spill](hazard_type) at [Industrial Park](location)
+    - there's an [oil spill](hazard_type) on [Main Road](location)
+    - I found [toxic materials](hazard_type) at [Warehouse District](location)
+    - report [asbestos exposure](hazard_type) at [Old Building](location)
+    - there's [mold growth](hazard_type) in [Apartment Complex](location)
+    - I see [broken playground equipment](hazard_type) at [City Park](location)
+    - report [damaged park facilities](hazard_type) at [Community Park](location)
+    - there's an [unsafe construction site](hazard_type) at [Construction Zone](location)
+    - I found [unsecured construction materials](hazard_type) at [Building Site](location)
+    - report [dangerous animals](hazard_type) near [Residential Area](location)
+    - there's [aggressive wildlife](hazard_type) at [Nature Reserve](location)
+    - I see [bee nest](hazard_type) at [Public Garden](location)
+    - report [ice patches](hazard_type) on [Winter Street](location)
+    - there's [snow accumulation](hazard_type) at [Mountain Road](location)
+    - I found [flooding](hazard_type) at [River Road](location)
+    - report [landslide](hazard_type) near [Hill Street](location)
+    - there's [erosion](hazard_type) at [Coastal Road](location)
+    - I see [storm damage](hazard_type) at [Storm Area](location)
+    - report [downed power lines](hazard_type) on [Electric Avenue](location)
+    - there's [structural damage](hazard_type) to [Old Building](location)
+    - I found [loose bricks](hazard_type) at [Historic District](location)
+    - report [damaged stairs](hazard_type) at [Public Building](location)
+    - there are [broken windows](hazard_type) at [Office Building](location)
+    - I see [damaged roof](hazard_type) at [School Building](location)
+    - report [unsafe balcony](hazard_type) at [Apartment Building](location)
+    - there's [damaged fire escape](hazard_type) at [Hotel Building](location)
+    - I found [garbage accumulation](hazard_type) at [Public Area](location)
+    - report [sewage leak](hazard_type) at [Residential Area](location)
+    - there's [standing water](hazard_type) at [Park Area](location)
+    - I see [dead animal](hazard_type) at [Road Side](location)
+    - report [unsanitary conditions](hazard_type) at [Public Facility](location)
+    - there's [pest infestation](hazard_type) at [Restaurant Area](location)
+    - I found [contaminated water](hazard_type) at [Water Source](location)
+
+- intent: confirm_hazard_info
+  examples: |
+    - yes that's correct
+    - yes that's right
+    - yes that information is correct
+    - yes that's accurate
+    - yes that's the right information
+    - yes that's the correct location
+    - yes that's the right hazard type
+    - yes that's all correct
+    - yes that's perfect
+    - yes that's exactly right
+
+- intent: edit_hazard_info
+  examples: |
+    - no that's not correct
+    - no that's wrong
+    - no that information is incorrect
+    - no that's not accurate
+    - no that's the wrong location
+    - no that's the wrong hazard type
+    - no that needs to be changed
+    - no that's not right
+    - no that's incorrect
+    - no that's not accurate
+
+- intent: emergency_alert
+  examples: |
+    - is there an emergency
+    - any emergency alerts
+    - are there any emergencies
+    - what's the emergency situation
+    - any urgent alerts
+    - emergency status
+    - current emergency
+    - is it safe
+
+- intent: get_safety_tip
+  examples: |
+    - give me safety tips
+    - how can I stay safe
+    - safety advice
+    - what are some safety tips
+    - how to be safe
+    - safety precautions
+    - safety measures
+    - safety guidelines
+
+- intent: connect_services
+  examples: |
+    - how do I connect to city services
+    - city services contact
+    - connect to services
+    - how to reach city services
+    - city department contact
+    - municipal services
+    - government services
+    - public services
+
+- intent: weather_related
+  examples: |
+    - is it safe to go out in this weather
+    - weather safety
+    - is it safe in this rain
+    - weather conditions
+    - is it safe in this storm
+    - weather warning
+    - weather alert
+    - weather safety tips
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: out_of_scope
+  examples: |
+    - I want to order a pizza
+    - book a flight
+    - what's the weather like
+    - tell me a joke
+    - play music
+    - what's your favorite color
+    - how old are you
+    - what's your name
+
+- intent: chitchat
+  examples: |
+    - hi, how are you doing?
+    - i'm fine. how about yourself?
+    - i'm pretty good. thanks for asking.
+    - no problem. so how have you been?
+    - i've been great. what about you?
+    - i've been good. i'm in school right now.
+    - what school do you go to?
+    - i go to pcc.
+    - do you like it there?
+    - it's okay. it's a really big campus.
+    - good luck with school.
+    - thank you very much.
+    - how's it going?
+    - i'm doing well. how about you?
+    - never better, thanks.
+    - so how have you been lately?
+    - i've actually been pretty good. you?
+    - i'm actually in school right now.
+    - which school do you attend?
+    - i'm attending pcc right now.

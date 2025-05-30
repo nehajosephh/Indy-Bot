@@ -1,0 +1,48 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+
+- rule: Activate help
+  steps:
+  - intent: help
+  - action: utter_help
+
+- rule: Respond to emergency
+  steps:
+  - intent: emergency_alert
+  - action: utter_emergency_alert
+
+- rule: Show emergency contacts
+  steps:
+    - intent: emergency_contacts
+    - action: utter_emergency_contacts
+
+- rule: Help with domestic abuse
+  steps:
+    - intent: domestic_abuse_help
+    - action: utter_domestic_abuse_help
+
+- rule: First aid help
+  steps:
+    - intent: first_aid_instructions
+    - action: utter_first_aid_instructions
+
+- rule: Weather alert
+  steps:
+    - intent: weather_alerts
+    - action: utter_weather_alerts
+
+- rule: Nearest police station
+  steps:
+    - intent: nearest_police_station
+    - action: utter_nearest_police_station

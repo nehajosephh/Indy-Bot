@@ -1,0 +1,82 @@
+{
+  "type": "IntentMaxHistoryTrackerFeaturizer",
+  "state_featurizer": {
+    "action_texts": [],
+    "entity_tag_specs": [],
+    "feature_states": {
+      "intent": {
+        "affirm": 0,
+        "back": 1,
+        "chitchat": 2,
+        "connect_services": 3,
+        "deny": 4,
+        "domestic_abuse_help": 5,
+        "emergency_alert": 6,
+        "emergency_contacts": 7,
+        "first_aid_instructions": 8,
+        "get_safety_tip": 9,
+        "goodbye": 10,
+        "greet": 11,
+        "help": 12,
+        "nearest_police_station": 13,
+        "nlu_fallback": 14,
+        "out_of_scope": 15,
+        "report_crime": 16,
+        "report_hazard": 17,
+        "restart": 18,
+        "session_start": 19,
+        "thank": 20,
+        "weather_alerts": 21,
+        "weather_related": 22
+      },
+      "action_name": {
+        "action_listen": 0,
+        "action_restart": 1,
+        "action_session_start": 2,
+        "action_default_fallback": 3,
+        "action_deactivate_loop": 4,
+        "action_revert_fallback_events": 5,
+        "action_default_ask_affirmation": 6,
+        "action_default_ask_rephrase": 7,
+        "action_two_stage_fallback": 8,
+        "action_unlikely_intent": 9,
+        "action_back": 10,
+        "...": 11,
+        "action_extract_slots": 12,
+        "report_hazard": 13,
+        "action_report_crime": 14,
+        "utter_chitchat": 15,
+        "utter_connect_services": 16,
+        "utter_domestic_abuse_help": 17,
+        "utter_emergency_alert": 18,
+        "utter_emergency_contacts": 19,
+        "utter_first_aid_instructions": 20,
+        "utter_goodbye": 21,
+        "utter_greet": 22,
+        "utter_help": 23,
+        "utter_nearest_police_station": 24,
+        "utter_out_of_scope": 25,
+        "utter_report_hazard": 26,
+        "utter_safety_tip": 27,
+        "utter_thank": 28,
+        "utter_weather_alerts": 29,
+        "utter_weather_related": 30
+      },
+      "entities": {
+        "crime_type": 0,
+        "first_aid_type": 1,
+        "hazard_type": 2,
+        "location": 3
+      },
+      "slots": {
+        "location_0": 0,
+        "hazard_type_0": 1,
+        "crime_type_0": 2,
+        "first_aid_type_0": 3
+      },
+      "active_loop": {}
+    }
+  },
+  "remove_duplicates": true,
+  "max_history": 5
+}

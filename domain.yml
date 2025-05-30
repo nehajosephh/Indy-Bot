@@ -1,0 +1,158 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - thank
+  - help
+  - report_hazard
+  - emergency_alert
+  - get_safety_tip
+  - connect_services
+  - weather_related
+  - affirm
+  - deny
+  - out_of_scope
+  - chitchat
+  - report_crime
+  - emergency_contacts
+  - nearest_police_station
+  - first_aid_instructions
+  - weather_alerts
+  - domestic_abuse_help
+  - confirm_hazard_info
+  - edit_hazard_info
+
+entities:
+  - location
+  - hazard_type
+  - crime_type
+  - first_aid_type
+
+slots:
+  location:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: location
+
+  hazard_type:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: hazard_type
+
+  crime_type:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: crime_type
+
+  first_aid_type:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: first_aid_type
+
+  hazard_confirmed:
+    type: bool
+    mappings:
+    - type: custom
+
+responses:
+  utter_greet:
+    - text: "Hello! I'm your Indy Public Safety Bot. How can I help you today?"
+    - text: "Hi there! I'm here to help with safety concerns and information. What can I do for you?"
+    - text: "Greetings! I'm your safety assistant. How may I help you?"
+
+  utter_goodbye:
+    - text: "Goodbye! Stay safe!"
+    - text: "Take care! Remember to stay alert and safe."
+    - text: "Bye! Don't hesitate to reach out if you need safety assistance."
+
+  utter_thank:
+    - text: "You're welcome! Is there anything else I can help you with?"
+    - text: "Happy to help! Let me know if you need anything else."
+    - text: "My pleasure! Stay safe out there."
+
+  utter_help:
+    - text: "I can help you with:\n- Reporting hazards\n- Getting safety tips\n- Emergency alerts\n- Weather-related safety information\n- Connecting with safety services\nWhat would you like to know more about?"
+    - text: "Here's what I can do:\n- Report safety hazards\n- Provide safety guidance\n- Send emergency alerts\n- Share weather safety info\n- Connect you with services\nHow can I assist you?"
+
+  utter_report_hazard:
+    - text: "I'll help you report a hazard. Please tell me the location and type of hazard."
+    - text: "To report a hazard, I need to know where it is and what type of hazard it is. Could you provide these details?"
+
+  utter_confirm_hazard:
+    - text: "I have the following information:\nLocation: {location}\nHazard Type: {hazard_type}\nIs this information correct?"
+    - text: "Please confirm if this is correct:\nLocation: {location}\nHazard Type: {hazard_type}"
+
+  utter_edit_hazard:
+    - text: "What information would you like to change? Please provide the correct details."
+    - text: "Please provide the correct information for the hazard report."
+
+  utter_hazard_confirmed:
+    - text: "Thank you for confirming. I'll submit this hazard report now."
+    - text: "Great! I'll process this hazard report with the confirmed information."
+
+  utter_emergency_alert:
+    - text: "This is an emergency alert. Please stay calm and follow these steps:\n1. Ensure your safety first\n2. Call emergency services if needed\n3. Follow official instructions\n4. Stay informed through official channels"
+    - text: "EMERGENCY ALERT: Please remain calm and follow safety protocols. Help is on the way."
+
+  utter_safety_tip:
+    - text: "Here's a safety tip: Always be aware of your surroundings and trust your instincts. If something feels unsafe, it probably is."
+    - text: "Safety tip: Keep emergency numbers handy and know your location in case you need to call for help."
+
+  utter_connect_services:
+    - text: "I can help you connect with various safety services. Which service would you like to know more about?"
+    - text: "Here are the safety services available:\n- Emergency Services: 911\n- Non-emergency Police: 311\n- Fire Department\n- Medical Services\nWhich would you like to connect with?"
+
+  utter_weather_related:
+    - text: "For weather-related safety:\n- Check local weather alerts\n- Stay indoors during severe weather\n- Have an emergency kit ready\n- Follow evacuation orders if issued"
+    - text: "Weather safety tips:\n- Monitor weather forecasts\n- Prepare for changing conditions\n- Keep emergency supplies handy\n- Stay informed about warnings"
+
+  utter_out_of_scope:
+    - text: "I'm sorry, I can only help with safety-related matters. Is there something specific about safety that I can assist you with?"
+    - text: "I'm focused on safety concerns. Could you please ask me about safety-related topics?"
+
+  utter_chitchat:
+    - text: "I'm here to help with safety concerns, but I'm happy to chat! What's on your mind?"
+    - text: "While my main focus is safety, I'm always happy to have a friendly conversation. How are you today?"
+    - text: "I'm doing well, thank you for asking! I'm here to help keep you safe. Is there anything specific you'd like to know about safety?"
+
+  utter_emergency_contacts:
+    - text: |
+        🚨 Emergency Numbers:
+        - 911 for all emergencies
+        - Non-emergency Police: 317-327-3811
+        - Poison Control: 1-800-222-1222
+
+  utter_domestic_abuse_help:
+    - text: |
+        🆘 You're not alone.
+        - National Domestic Violence Hotline: 800-799-7233
+        - Indiana Coalition: 317-917-3685
+        - Text "LOVEIS" to 22522
+
+  utter_first_aid_instructions:
+    - text: |
+        CPR Steps:
+        1. Call 911.
+        2. Push hard and fast in the center of the chest.
+        3. Alternate 30 compressions with 2 breaths.
+
+  utter_nearest_police_station:
+    - text: |
+        IMPD Headquarters: 50 N Alabama St, Indianapolis, IN 46204
+
+  utter_weather_alerts:
+    - text: |
+        🌩️ Severe weather alert for Indianapolis: Thunderstorm Warning until 8PM.
+
+actions:
+  - report_hazard
+  - action_report_crime
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

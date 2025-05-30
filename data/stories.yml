@@ -1,0 +1,129 @@
+version: "3.1"
+
+stories:
+
+- story: hazard reporting path with confirmation
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: report_hazard
+    entities:
+    - location: "123 Main St"
+    - hazard_type: "broken glass"
+  - action: report_hazard
+  - action: utter_confirm_hazard
+  - intent: confirm_hazard_info
+  - action: report_hazard
+  - action: utter_hazard_confirmed
+  - action: utter_thank
+
+- story: hazard reporting path with correction
+  steps:
+  - intent: report_hazard
+    entities:
+    - location: "Central Park"
+    - hazard_type: "fallen tree"
+  - action: report_hazard
+  - action: utter_confirm_hazard
+  - intent: edit_hazard_info
+  - action: utter_edit_hazard
+  - intent: report_hazard
+    entities:
+    - location: "Central Park"
+    - hazard_type: "fallen branch"
+  - action: report_hazard
+  - action: utter_confirm_hazard
+  - intent: confirm_hazard_info
+  - action: report_hazard
+  - action: utter_hazard_confirmed
+  - action: utter_thank
+
+- story: hazard reporting path with missing info
+  steps:
+  - intent: report_hazard
+  - action: utter_report_hazard
+  - intent: report_hazard
+    entities:
+    - location: "Central Park"
+    - hazard_type: "fallen tree"
+  - action: report_hazard
+  - action: utter_confirm_hazard
+  - intent: confirm_hazard_info
+  - action: report_hazard
+  - action: utter_hazard_confirmed
+  - action: utter_thank
+
+- story: emergency path
+  steps:
+  - intent: emergency_alert
+  - action: utter_emergency_alert
+
+- story: safety tips path
+  steps:
+  - intent: get_safety_tip
+  - action: utter_safety_tip
+  - intent: thank
+  - action: utter_thank
+
+- story: weather safety path
+  steps:
+  - intent: weather_related
+  - action: utter_weather_related
+  - intent: affirm
+  - action: utter_safety_tip
+
+- story: help path
+  steps:
+  - intent: help
+  - action: utter_help
+
+- story: direct goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: out of scope
+  steps:
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+
+- story: chitchat sample 1
+  steps:
+  - intent: chitchat
+  - action: utter_chitchat
+- story: chitchat sample 2
+  steps:
+  - intent: chitchat
+  - action: utter_chitchat
+- story: chitchat sample 3
+  steps:
+  - intent: chitchat
+  - action: utter_chitchat
+- story: chitchat sample 4
+  steps:
+  - intent: chitchat
+  - action: utter_chitchat
+- story: chitchat sample 5
+  steps:
+  - intent: chitchat
+  - action: utter_chitchat
+- story: chitchat sample 6
+  steps:
+  - intent: chitchat
+  - action: utter_chitchat
+- story: chitchat sample 7
+  steps:
+  - intent: chitchat
+  - action: utter_chitchat
+- story: chitchat sample 8
+  steps:
+  - intent: chitchat
+  - action: utter_chitchat
+- story: chitchat sample 9
+  steps:
+  - intent: chitchat
+  - action: utter_chitchat
+- story: chitchat sample 10
+  steps:
+  - intent: chitchat
+  - action: utter_chitchat
